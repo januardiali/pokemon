@@ -1,0 +1,55 @@
+body {
+    background-color: #ccc;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page {
+    position: relative;
+    text-align: center;
+  }
+  
+  .page-search {
+    padding-top: 10px;
+  }
+  
+  .page__error {
+    position: absolute;
+    padding: 5px;
+    color: #fff;
+    background-color: #f44336;
+  }
+  
+  .pokemons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .pokemon-item {
+    display: inline-flex;
+    margin: 10px;
+  }
+  
+  .pokemon {
+    
+  }
+  
+  .pokemon-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    border: none;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .pokemon-name {
+    
+  }
+  
