@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { call, put } from 'redux-saga/effects';
-import { merge } from 'lodash/object';
+import { put } from 'redux-saga/effects';
 
 import { receiveAllPokemon, receivePokemonDetail, fail, hideLoading, showLoading } from '../actions/pokemon';
 
@@ -14,24 +13,7 @@ export function* fetchAllPokemon({ param }) {
             method: "get",
             url: `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
         });
-
-        const results = [];
         if (res) {
-            // for (let result of res.data.results) {
-            //     const resTypes = yield axios({
-            //         method: "get",
-            //         url: result.url
-            //     });
-            //     if (resTypes) {
-            //         const types = resTypes.data.types.reduce((accumulator, type) => {
-            //             accumulator.push({
-            //                 name: type.type.name
-            //             })
-            //             return accumulator;
-            //         }, []);
-            //         results.push(merge(result, { types }))
-            //     }
-            // }
             
             const payload = {
                 count: res.data.count,

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import SearchIcon from '@material-ui/icons/Search';
@@ -31,7 +31,8 @@ const Footer = props => {
         if (location && prevLocationPathName && location.pathname !== prevLocationPathName) {
             setValue(location.pathname)
         }
-    }, [location])
+    }, [location, prevLocationPathName])
+
     return (
         <BottomNavigation
             value={value}

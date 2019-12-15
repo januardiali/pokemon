@@ -35,9 +35,8 @@ const useStyles = makeStyles(theme => ({
 
 const Main = () => {
     const classes = useStyles();
-    const [limit, setLimit] = useState(20);
+    const [limit, setLimit] = useState(964);
     const [offset, setOffset] = useState(0);
-    const [error, setError] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [pokemonIds, setPokemonIds] = useState([]);
     const { isFetched, collection, count } = useSelector(state => state.pokemon);
@@ -97,6 +96,7 @@ const Main = () => {
                 <p>Loading...</p>
             ) : (
                 <Grid item xs={12}>
+                    <h2>Pokemon owned {count}</h2>
                     <Grid container justify="center" spacing={3}>
                         {pokemons}
                     </Grid>

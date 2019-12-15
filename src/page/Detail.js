@@ -245,6 +245,7 @@ const Detail = () => {
                                 {!success ? <h1 style={{ textAlign: 'center'}}>:(</h1> :
                                 <>
                                 <img 
+                                    alt={detail.name}
                                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
                                         id
                                         }.png`} className={classes.cover} />
@@ -267,10 +268,10 @@ const Detail = () => {
                                 Try Again
                             </Button> : (
                                 <>
-                                    <Button onClick={handleClose} color="primary" onClick={onCancel}>
+                                    <Button color="primary" onClick={onCancel}>
                                         Cancel
                                     </Button>
-                                    <Button onClick={handleClose} color="primary" onClick={onSubmit}>
+                                    <Button color="primary" onClick={onSubmit}>
                                         Submit
                                     </Button>
                                 </>
